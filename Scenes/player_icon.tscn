@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://car1nnlbwnbid"]
+
+[ext_resource type="Texture2D" uid="uid://cvya7u03hnhk8" path="res://Assets/cursour_player.png" id="1_l12c4"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_l12c4")

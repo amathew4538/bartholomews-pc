@@ -1,0 +1,213 @@
+[gd_scene load_steps=9 format=3 uid="uid://cwwckjnessu02"]
+
+[ext_resource type="FontFile" uid="uid://crpij1m4sqxgr" path="res://Assets/m6x11plus.ttf" id="1_hs70x"]
+[ext_resource type="Script" uid="uid://buirhowy1a7mb" path="res://Scripts/quit_button.gd" id="2_8k21b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs70x"]
+bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8k21b"]
+bg_color = Color(0.5310511, 0.53105104, 0.5310513, 0.7372549)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avrgi"]
+bg_color = Color(0.3291585, 0.32915834, 0.3291584, 0.7058824)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Animation" id="Animation_8k21b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("start_button:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(704, 344)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("quit_button:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(705, 568)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(424, 78)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Version:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(936, 264)]
+}
+
+[sub_resource type="Animation" id="Animation_avrgi"]
+resource_name = "title_bob"
+length = 3.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("start_button:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.39999998, 0.8000001, 1.2, 1.5999999, 2, 2.4, 2.8, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001),
+"update": 0,
+"values": [Vector2(704, 346), Vector2(704, 362), Vector2(704, 346), Vector2(704, 330), Vector2(704, 346), Vector2(704, 362), Vector2(704, 346), Vector2(704, 330), Vector2(704, 346)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("quit_button:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.39999998, 0.8000001, 1.2, 1.5999999, 2, 2.4, 2.8, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001),
+"update": 0,
+"values": [Vector2(705, 570), Vector2(705, 586), Vector2(705, 570), Vector2(705, 554), Vector2(705, 570), Vector2(705, 586), Vector2(705, 570), Vector2(705, 554), Vector2(705, 570)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.39999998, 0.8000001, 1.2, 1.5999999, 2, 2.4, 2.8, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001),
+"update": 0,
+"values": [Vector2(424, 80), Vector2(424, 96), Vector2(424, 80), Vector2(424, 64), Vector2(424, 80), Vector2(424, 96), Vector2(424, 80), Vector2(424, 64), Vector2(424, 80)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Version:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.39999998, 0.8000001, 1.2, 1.5999999, 2, 2.4, 2.8, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001),
+"update": 0,
+"values": [Vector2(936, 266), Vector2(936, 282), Vector2(936, 266), Vector2(936, 250), Vector2(936, 266), Vector2(936, 282), Vector2(936, 266), Vector2(936, 250), Vector2(936, 266)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wfxj5"]
+_data = {
+&"RESET": SubResource("Animation_8k21b"),
+&"title_bob": SubResource("Animation_avrgi")
+}
+
+[node name="Start_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 344.0
+offset_right = 1226.0
+offset_bottom = 521.0038
+theme_override_fonts/font = ExtResource("1_hs70x")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_hs70x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8k21b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_avrgi")
+text = "Start"
+
+[node name="quit_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 568.0
+offset_right = 1227.0
+offset_bottom = 745.00006
+theme_override_fonts/font = ExtResource("1_hs70x")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_hs70x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8k21b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_avrgi")
+text = "Quit"
+script = ExtResource("2_8k21b")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+offset_left = 424.0
+offset_top = 78.0
+offset_right = 1484.0
+offset_bottom = 258.00012
+theme_override_font_sizes/font_size = 180
+text = "Bartholomew's PC"
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 264.0
+offset_right = 984.0
+offset_bottom = 300.00027
+theme_override_font_sizes/font_size = 36
+text = "v0.3"
+horizontal_alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wfxj5")
+}
+autoplay = "title_bob"
+speed_scale = 0.25
+
+[connection signal="pressed" from="quit_button" to="quit_button" method="_on_pressed"]

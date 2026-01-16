@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://cy5iicjq5qxg0"]
+
+[ext_resource type="Script" uid="uid://l80xlfmk8hba" path="res://Scripts/world_select.gd" id="1_o86io"]
+[ext_resource type="PackedScene" uid="uid://smguqmehden" path="res://Scenes/world_icon.tscn" id="1_ylq8w"]
+[ext_resource type="PackedScene" uid="uid://car1nnlbwnbid" path="res://Scenes/player_icon.tscn" id="2_01xfc"]
+[ext_resource type="Texture2D" uid="uid://m6fy4qididsm" path="res://Assets/XP_Background.jpg" id="3_wl14q"]
+[ext_resource type="Texture2D" uid="uid://c7yr03mesqe2f" path="res://WindowsXPBar.jpg" id="4_o86io"]
+
+[node name="WorldSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_o86io")
+
+[node name="WorldIcon" parent="." instance=ExtResource("1_ylq8w")]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 384.0
+offset_right = 512.0
+offset_bottom = 448.0
+
+[node name="WorldIcon2" parent="." instance=ExtResource("1_ylq8w")]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 640.0
+offset_right = 768.0
+offset_bottom = 704.0
+world_index = 1
+
+[node name="WorldIcon3" parent="." instance=ExtResource("1_ylq8w")]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 384.0
+offset_right = 1024.0
+offset_bottom = 448.0
+world_index = 2
+
+[node name="WorldIcon4" parent="." instance=ExtResource("1_ylq8w")]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 640.0
+offset_right = 1280.0
+offset_bottom = 704.0
+world_index = 3
+
+[node name="WorldIcon5" parent="." instance=ExtResource("1_ylq8w")]
+layout_mode = 0
+offset_left = 1472.0
+offset_top = 384.0
+offset_right = 1536.0
+offset_bottom = 448.0
+world_index = 4
+
+[node name="PlayerIcon" parent="." instance=ExtResource("2_01xfc")]
+layout_mode = 0
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -10
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_wl14q")
+expand_mode = 1
+
+[node name="BottomBar" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 1038.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_o86io")
+expand_mode = 2

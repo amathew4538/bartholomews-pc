@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba7xi7b3tdyya"]
+
+[ext_resource type="Script" uid="uid://dggjf08lg7ct4" path="res://Scripts/global_quit.gd" id="1_coli5"]
+[ext_resource type="FontFile" uid="uid://crpij1m4sqxgr" path="res://Assets/m6x11plus.ttf" id="2_maqen"]
+
+[sub_resource type="Theme" id="Theme_thjj0"]
+default_font = ExtResource("2_maqen")
+default_font_size = 54
+
+[node name="GlobalQuit" type="CanvasLayer"]
+script = ExtResource("1_coli5")
+
+[node name="quit_popup" type="ConfirmationDialog" parent="."]
+title = "Are you sure?"
+initial_position = 4
+size = Vector2i(600, 400)
+always_on_top = true
+theme = SubResource("Theme_thjj0")
+ok_button_text = "Quit"
+dialog_text = "Are you sure?"
+
+[connection signal="confirmed" from="quit_popup" to="." method="_on_quit_popup_confirmed"]

@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Bartholomew's PC"
+run/main_scene="uid://bkxbmkduy0n7x"
+config/auto_accept_quit=false
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+FlowerwallPp="*res://addons/flowerwall_postprocess/scenes/flowerwall_pp.tscn"
+GlobalQuit="*res://Scenes/global_quit.tscn"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/stretch/mode="viewport"
+
+[gui]
+
+theme/custom_font="uid://crpij1m4sqxgr"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
