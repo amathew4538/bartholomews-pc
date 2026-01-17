@@ -1,10 +1,48 @@
-[gd_scene load_steps=6 format=3 uid="uid://cy5iicjq5qxg0"]
+[gd_scene load_steps=11 format=3 uid="uid://cy5iicjq5qxg0"]
 
 [ext_resource type="Script" uid="uid://l80xlfmk8hba" path="res://Scripts/world_select.gd" id="1_o86io"]
 [ext_resource type="PackedScene" uid="uid://smguqmehden" path="res://Scenes/world_icon.tscn" id="1_ylq8w"]
 [ext_resource type="PackedScene" uid="uid://car1nnlbwnbid" path="res://Scenes/player_icon.tscn" id="2_01xfc"]
 [ext_resource type="Texture2D" uid="uid://m6fy4qididsm" path="res://Assets/XP_Background.jpg" id="3_wl14q"]
 [ext_resource type="Texture2D" uid="uid://c7yr03mesqe2f" path="res://WindowsXPBar.jpg" id="4_o86io"]
+[ext_resource type="FontFile" uid="uid://crpij1m4sqxgr" path="res://Assets/m6x11plus.ttf" id="6_o86io"]
+[ext_resource type="Script" uid="uid://do8852am314t3" path="res://Scripts/back_button.gd" id="7_hojrt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hojrt"]
+bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnigp"]
+bg_color = Color(0.5310511, 0.53105104, 0.5310513, 0.7372549)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slmsx"]
+bg_color = Color(0.3291585, 0.32915834, 0.3291584, 0.7058824)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="WorldSelect" type="Control"]
 layout_mode = 3
@@ -70,3 +108,20 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("4_o86io")
 expand_mode = 2
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 64.0
+offset_right = 322.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("6_o86io")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_hojrt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pnigp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_slmsx")
+text = "Back
+"
+script = ExtResource("7_hojrt")
+
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]

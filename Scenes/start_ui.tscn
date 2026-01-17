@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwwckjnessu02"]
+[gd_scene load_steps=10 format=3 uid="uid://cwwckjnessu02"]
 
 [ext_resource type="FontFile" uid="uid://crpij1m4sqxgr" path="res://Assets/m6x11plus.ttf" id="1_hs70x"]
 [ext_resource type="Script" uid="uid://buirhowy1a7mb" path="res://Scripts/quit_button.gd" id="2_8k21b"]
+[ext_resource type="Script" uid="uid://cwudobesasax0" path="res://Scripts/start_button.gd" id="2_avrgi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs70x"]
 bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
@@ -169,6 +170,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_hs70x")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8k21b")
 theme_override_styles/hover = SubResource("StyleBoxFlat_avrgi")
 text = "Start"
+script = ExtResource("2_avrgi")
 
 [node name="quit_button" type="Button" parent="."]
 layout_mode = 0
@@ -200,7 +202,7 @@ offset_top = 264.0
 offset_right = 984.0
 offset_bottom = 300.00027
 theme_override_font_sizes/font_size = 36
-text = "v0.3"
+text = "v0.4"
 horizontal_alignment = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -210,4 +212,5 @@ libraries = {
 autoplay = "title_bob"
 speed_scale = 0.25
 
+[connection signal="pressed" from="start_button" to="start_button" method="_on_pressed"]
 [connection signal="pressed" from="quit_button" to="quit_button" method="_on_pressed"]

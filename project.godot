@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 FlowerwallPp="*res://addons/flowerwall_postprocess/scenes/flowerwall_pp.tscn"
 GlobalQuit="*res://Scenes/global_quit.tscn"
+SceneTransitionAnimation="*res://Scenes/scene_transition_animation.tscn"
 
 [display]
 
