@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwwckjnessu02"]
+[gd_scene load_steps=12 format=3 uid="uid://cwwckjnessu02"]
 
 [ext_resource type="FontFile" uid="uid://crpij1m4sqxgr" path="res://Assets/m6x11plus.ttf" id="1_hs70x"]
 [ext_resource type="Script" uid="uid://buirhowy1a7mb" path="res://Scripts/quit_button.gd" id="2_8k21b"]
 [ext_resource type="Script" uid="uid://cwudobesasax0" path="res://Scripts/start_button.gd" id="2_avrgi"]
+[ext_resource type="Script" uid="uid://dikmq5htpn7k3" path="res://Scripts/changelog_button.gd" id="3_wfxj5"]
+[ext_resource type="PackedScene" uid="uid://0jcv86qxdaav" path="res://Scenes/changelog_panel.tscn" id="4_q7rna"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs70x"]
 bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
@@ -57,7 +59,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("quit_button:position")
+tracks/1/path = NodePath("changelog_button:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -90,10 +92,22 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(936, 264)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("quit_button:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(704, 816)]
+}
 
 [sub_resource type="Animation" id="Animation_avrgi"]
 resource_name = "title_bob"
-length = 3.2
+length = 1.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -102,22 +116,22 @@ tracks/0/path = NodePath("start_button:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.39999998, 0.8000001, 1.2, 1.5999999, 2, 2.4, 2.8, 3.2),
-"transitions": PackedFloat32Array(1, 1, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001),
+"times": PackedFloat32Array(0, 0.39999998, 0.8000001, 1.2, 1.5999999),
+"transitions": PackedFloat32Array(1, 1, 1.0000001, 1.0000001, 1.0000001),
 "update": 0,
-"values": [Vector2(704, 346), Vector2(704, 362), Vector2(704, 346), Vector2(704, 330), Vector2(704, 346), Vector2(704, 362), Vector2(704, 346), Vector2(704, 330), Vector2(704, 346)]
+"values": [Vector2(704, 346), Vector2(704, 362), Vector2(704, 346), Vector2(704, 330), Vector2(704, 346)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("quit_button:position")
+tracks/1/path = NodePath("changelog_button:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.39999998, 0.8000001, 1.2, 1.5999999, 2, 2.4, 2.8, 3.2),
-"transitions": PackedFloat32Array(1, 1, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001, 1.0000001),
+"times": PackedFloat32Array(0, 0.39999998, 0.8000001, 1.2, 1.5999999),
+"transitions": PackedFloat32Array(1, 1, 1.0000001, 1.0000001, 1.0000001),
 "update": 0,
-"values": [Vector2(705, 570), Vector2(705, 586), Vector2(705, 570), Vector2(705, 554), Vector2(705, 570), Vector2(705, 586), Vector2(705, 570), Vector2(705, 554), Vector2(705, 570)]
+"values": [Vector2(705, 570), Vector2(705, 586), Vector2(705, 570), Vector2(705, 554), Vector2(705, 570)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -143,6 +157,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(936, 266), Vector2(936, 282), Vector2(936, 266), Vector2(936, 250), Vector2(936, 266), Vector2(936, 282), Vector2(936, 266), Vector2(936, 250), Vector2(936, 266)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("quit_button:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(704, 816), Vector2(704, 832), Vector2(704, 816), Vector2(704, 800), Vector2(704, 816), Vector2(704, 832), Vector2(704, 816), Vector2(704, 800), Vector2(704, 816)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wfxj5"]
 _data = {
@@ -163,7 +189,7 @@ layout_mode = 0
 offset_left = 704.0
 offset_top = 344.0
 offset_right = 1226.0
-offset_bottom = 521.0038
+offset_bottom = 521.0044
 theme_override_fonts/font = ExtResource("1_hs70x")
 theme_override_font_sizes/font_size = 54
 theme_override_styles/normal = SubResource("StyleBoxFlat_hs70x")
@@ -172,12 +198,27 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_avrgi")
 text = "Start"
 script = ExtResource("2_avrgi")
 
-[node name="quit_button" type="Button" parent="."]
+[node name="changelog_button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 705.0
 offset_top = 568.0
 offset_right = 1227.0
 offset_bottom = 745.00006
+theme_override_fonts/font = ExtResource("1_hs70x")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_hs70x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8k21b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_avrgi")
+text = "Changelog"
+script = ExtResource("3_wfxj5")
+changelog_scene = ExtResource("4_q7rna")
+
+[node name="quit_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 816.0
+offset_right = 1226.0
+offset_bottom = 993.00006
 theme_override_fonts/font = ExtResource("1_hs70x")
 theme_override_font_sizes/font_size = 54
 theme_override_styles/normal = SubResource("StyleBoxFlat_hs70x")
@@ -191,7 +232,7 @@ layout_mode = 1
 offset_left = 424.0
 offset_top = 78.0
 offset_right = 1484.0
-offset_bottom = 258.00012
+offset_bottom = 258.00015
 theme_override_font_sizes/font_size = 180
 text = "Bartholomew's PC"
 
@@ -199,10 +240,10 @@ text = "Bartholomew's PC"
 layout_mode = 0
 offset_left = 936.0
 offset_top = 264.0
-offset_right = 984.0
-offset_bottom = 300.00027
+offset_right = 998.0
+offset_bottom = 300.00015
 theme_override_font_sizes/font_size = 36
-text = "v0.4"
+text = "v0.5a"
 horizontal_alignment = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -213,4 +254,5 @@ autoplay = "title_bob"
 speed_scale = 0.25
 
 [connection signal="pressed" from="start_button" to="start_button" method="_on_pressed"]
+[connection signal="pressed" from="changelog_button" to="changelog_button" method="_on_pressed"]
 [connection signal="pressed" from="quit_button" to="quit_button" method="_on_pressed"]
