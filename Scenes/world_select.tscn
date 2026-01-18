@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://smguqmehden" path="res://Scenes/world_icon.tscn" id="1_ylq8w"]
 [ext_resource type="PackedScene" uid="uid://car1nnlbwnbid" path="res://Scenes/player_icon.tscn" id="2_01xfc"]
 [ext_resource type="Texture2D" uid="uid://m6fy4qididsm" path="res://Assets/XP_Background.jpg" id="3_wl14q"]
-[ext_resource type="Texture2D" uid="uid://c7yr03mesqe2f" path="res://WindowsXPBar.jpg" id="4_o86io"]
+[ext_resource type="Texture2D" uid="uid://dm572m5mgcxk3" path="res://Assets/WindowsXPBar.jpg" id="4_o86io"]
 [ext_resource type="FontFile" uid="uid://crpij1m4sqxgr" path="res://Assets/m6x11plus.ttf" id="6_o86io"]
 [ext_resource type="Script" uid="uid://do8852am314t3" path="res://Scripts/back_button.gd" id="7_hojrt"]
 

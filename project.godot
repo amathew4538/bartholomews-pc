@@ -11,10 +11,12 @@ config_version=5
 [application]
 
 config/name="Bartholomew's PC"
-run/main_scene="uid://bkxbmkduy0n7x"
+run/main_scene="uid://db3ekeddiudml"
 config/auto_accept_quit=false
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="res://Assets/icon.svg"
 
 [autoload]
 

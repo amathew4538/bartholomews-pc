@@ -46,6 +46,21 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="Animation" id="Animation_e8qw5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 56)]
+}
+
 [sub_resource type="Animation" id="Animation_65pj6"]
 resource_name = "changelog_move"
 length = 1.6
@@ -61,21 +76,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(576, 64), Vector2(576, 80), Vector2(576, 64), Vector2(576, 48), Vector2(576, 64)]
-}
-
-[sub_resource type="Animation" id="Animation_e8qw5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PanelContainer:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(576, 56)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mw8qg"]
@@ -122,7 +122,10 @@ theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 theme_override_font_sizes/mono_font_size = 36
 bbcode_enabled = true
-text = "v0.5a
+text = "v0.6a
+- Startup screen added
+
+v0.5a
 - Changelog added
 
 v0.4a

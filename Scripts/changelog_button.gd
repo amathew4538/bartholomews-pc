@@ -11,5 +11,5 @@ func _on_pressed() -> void:
 	
 	# Tell the changelog animation to start at that exact same time
 	var instance_anim = instance.get_node("AnimationPlayer")
-	instance_anim.play("your_animation_name")
+	instance_anim.play("changelog_move")
 	instance_anim.seek(current_time, true)
