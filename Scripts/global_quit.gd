@@ -10,4 +10,4 @@ func _notification(what):
 		qp.popup_centered()
 		
 func _on_quit_popup_confirmed() -> void:
-	get_tree().quit(0)
+	SceneTransitionAnimation.change_scene("res://Scenes/shutdown.tscn")
