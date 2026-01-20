@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bkxbmkduy0n7x"]
 
 [ext_resource type="Texture2D" uid="uid://m6fy4qididsm" path="res://Assets/XP_Background.jpg" id="1_bo1nx"]
-[ext_resource type="Texture2D" uid="uid://dm572m5mgcxk3" path="res://Assets/WindowsXPBar.jpg" id="2_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://c7yr03mesqe2f" path="res://Assets/WindowsXPBar.jpg" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cwwckjnessu02" path="res://Scenes/start_ui.tscn" id="4_5e717"]
 [ext_resource type="PackedScene" uid="uid://d0ukswdli40lc" path="res://Scenes/player_cutscene.tscn" id="5_mtlf8"]
 
