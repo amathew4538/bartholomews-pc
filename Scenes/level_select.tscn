@@ -1,0 +1,108 @@
+[gd_scene load_steps=11 format=3 uid="uid://cogmsida1w1rw"]
+
+[ext_resource type="PackedScene" uid="uid://c514a80aitvkn" path="res://Scenes/level_icon.tscn" id="1_1fiak"]
+[ext_resource type="Script" uid="uid://d1f36vc2vawya" path="res://Scripts/level_select.gd" id="1_kb5mc"]
+[ext_resource type="PackedScene" uid="uid://car1nnlbwnbid" path="res://Scenes/player_icon.tscn" id="2_s6o25"]
+[ext_resource type="Texture2D" uid="uid://m6fy4qididsm" path="res://Assets/XP_Background.jpg" id="3_kb5mc"]
+[ext_resource type="Texture2D" uid="uid://c7yr03mesqe2f" path="res://Assets/WindowsXPBar.jpg" id="4_qnihq"]
+[ext_resource type="FontFile" uid="uid://crpij1m4sqxgr" path="res://Assets/m6x11plus.ttf" id="5_tgoug"]
+[ext_resource type="Script" uid="uid://cnsvntus7kov6" path="res://Scripts/back_button_level.gd" id="6_x038j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlwxk"]
+bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npf18"]
+bg_color = Color(0.5310511, 0.53105104, 0.5310513, 0.7372549)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpfon"]
+bg_color = Color(0.3291585, 0.32915834, 0.3291584, 0.7058824)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kb5mc")
+
+[node name="LevelIcon" parent="." node_paths=PackedStringArray("next_level_right") instance=ExtResource("1_1fiak")]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 512.0
+offset_right = 456.0
+offset_bottom = 576.0
+level_name = "1"
+next_level_right = NodePath("../LevelIcon2")
+
+[node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_left") instance=ExtResource("1_1fiak")]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 384.0
+offset_right = 704.0
+offset_bottom = 448.0
+level_name = "2"
+next_level_left = NodePath("../LevelIcon")
+
+[node name="PlayerIcon" parent="." instance=ExtResource("2_s6o25")]
+layout_mode = 0
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -10
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_kb5mc")
+expand_mode = 1
+
+[node name="BottomBar" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 1038.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_qnihq")
+expand_mode = 2
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 64.0
+offset_right = 322.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("5_tgoug")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_mlwxk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_npf18")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bpfon")
+text = "Back
+"
+script = ExtResource("6_x038j")
+
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]
