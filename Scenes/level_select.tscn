@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cogmsida1w1rw"]
+[gd_scene load_steps=12 format=3 uid="uid://cogmsida1w1rw"]
 
 [ext_resource type="PackedScene" uid="uid://c514a80aitvkn" path="res://Scenes/level_icon.tscn" id="1_1fiak"]
 [ext_resource type="Script" uid="uid://d1f36vc2vawya" path="res://Scripts/level_select.gd" id="1_kb5mc"]
 [ext_resource type="PackedScene" uid="uid://car1nnlbwnbid" path="res://Scenes/player_icon.tscn" id="2_s6o25"]
 [ext_resource type="Texture2D" uid="uid://m6fy4qididsm" path="res://Assets/XP_Background.jpg" id="3_kb5mc"]
+[ext_resource type="PackedScene" uid="uid://c5r6xacp3yo2t" path="res://Scenes/tutorial_lvl_1.tscn" id="3_qnihq"]
 [ext_resource type="Texture2D" uid="uid://c7yr03mesqe2f" path="res://Assets/WindowsXPBar.jpg" id="4_qnihq"]
 [ext_resource type="FontFile" uid="uid://crpij1m4sqxgr" path="res://Assets/m6x11plus.ttf" id="5_tgoug"]
 [ext_resource type="Script" uid="uid://cnsvntus7kov6" path="res://Scripts/back_button_level.gd" id="6_x038j"]
@@ -61,6 +62,7 @@ offset_right = 456.0
 offset_bottom = 576.0
 level_name = "1"
 next_level_right = NodePath("../LevelIcon2")
+level_packed = ExtResource("3_qnihq")
 
 [node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_left") instance=ExtResource("1_1fiak")]
 layout_mode = 0

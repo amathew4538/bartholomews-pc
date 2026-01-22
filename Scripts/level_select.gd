@@ -29,6 +29,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_down") and current_level.next_level_down:
 		current_level = current_level.next_level_down
 		tween_icon()
+	if event.is_action_pressed("ui_accept") and current_level.level:
+		SceneTransitionAnimation.change_scene(current_level.level)
 
 func tween_icon():
 	move_tween = get_tree().create_tween()

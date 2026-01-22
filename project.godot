@@ -12,12 +12,16 @@ config_version=5
 
 ss2d/version="3.3.1"
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Bartholomew's PC"
 run/main_scene="uid://db3ekeddiudml"
 config/auto_accept_quit=false
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="res://Assets/icon.svg"
@@ -27,9 +31,8 @@ config/icon="res://Assets/icon.svg"
 GlobalQuit="*res://Scenes/global_quit.tscn"
 SceneTransitionAnimation="*res://Scenes/scene_transition_animation.tscn"
 BetterTerrain="*res://addons/better-terrain/BetterTerrain.gd"
-flowerwall_crt="*res://addons/flowerwall_postprocess/scenes/flowerwall_pp.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+flowerwall_crt="*uid://cc1fomjf362h5"
+Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
@@ -46,7 +49,11 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/flowerwall_postprocess/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg")
+enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/flowerwall_postprocess/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg")
+
+[global_group]
+
+camera_area="The area the cameras stay within"
 
 [gui]
 

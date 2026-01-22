@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://4a4n38r2regb"
+path="res://.godot/imported/Windows XP Recycle.wav-ac38e441c83fdda5a895156cc530179a.sample"
+
+[deps]
+
+source_file="res://Assets/WinXp/Sounds/Windows XP Recycle.wav"
+dest_files=["res://.godot/imported/Windows XP Recycle.wav-ac38e441c83fdda5a895156cc530179a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,10 +1,11 @@
-[gd_scene load_steps=36 format=3 uid="uid://cu6jbw16m8mrp"]
+[gd_scene format=3 uid="uid://cu6jbw16m8mrp"]
 
 [ext_resource type="Script" uid="uid://qg8csuhtik58" path="res://Scripts/player_controller.gd" id="1_5ur5x"]
 [ext_resource type="Texture2D" uid="uid://bvhdukiocauf3" path="res://Assets/PlayerIdle.png" id="1_rd8vp"]
 [ext_resource type="Texture2D" uid="uid://bbj8lxk77ku0f" path="res://Assets/cursor_player_hover.png" id="2_1esxm"]
 [ext_resource type="Texture2D" uid="uid://kdvfkqkbk210" path="res://Assets/cursor_player_jump.png" id="4_3b8x7"]
 [ext_resource type="Texture2D" uid="uid://bdo0ahv1qtk5e" path="res://Assets/cursor_player_start_hover.png" id="5_53kst"]
+[ext_resource type="Script" uid="uid://byxpu50i3qsl" path="res://Scripts/camera.gd" id="6_3b8x7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iy555"]
 atlas = ExtResource("2_1esxm")
@@ -236,35 +237,39 @@ collision_mode = 1
 collision_friction = 0.07
 collision_bounce = 0.26
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=392966261]
 script = ExtResource("1_5ur5x")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=757953398]
 sprite_frames = SubResource("SpriteFrames_iy555")
 animation = &"start_hover"
 autoplay = "idle"
 
-[node name="Hand" type="CollisionShape2D" parent="."]
+[node name="Hand" type="CollisionShape2D" parent="." unique_id=275745180]
 position = Vector2(2, 0.25)
 shape = SubResource("RectangleShape2D_5ur5x")
 
-[node name="Feet" type="CollisionShape2D" parent="."]
+[node name="Feet" type="CollisionShape2D" parent="." unique_id=1736872512]
 position = Vector2(1.5, 29.5)
 shape = SubResource("RectangleShape2D_dl1v4")
 
-[node name="Legs" type="CollisionShape2D" parent="."]
+[node name="Legs" type="CollisionShape2D" parent="." unique_id=2116484873]
 position = Vector2(1, 19.5)
 shape = SubResource("RectangleShape2D_bnokr")
 
-[node name="Finger" type="CollisionShape2D" parent="."]
+[node name="Finger" type="CollisionShape2D" parent="." unique_id=754102944]
 position = Vector2(7, -14)
 shape = SubResource("CapsuleShape2D_1esxm")
 
-[node name="JumpParticles" type="GPUParticles2D" parent="."]
+[node name="JumpParticles" type="GPUParticles2D" parent="." unique_id=17307486]
 position = Vector2(3, 32)
 emitting = false
 amount = 100
 one_shot = true
 process_material = SubResource("ParticleProcessMaterial_1esxm")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1098576081]
+top_level = true
+script = ExtResource("6_3b8x7")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

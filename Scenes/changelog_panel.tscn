@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://0jcv86qxdaav"]
+[gd_scene format=3 uid="uid://0jcv86qxdaav"]
 
 [ext_resource type="Script" uid="uid://bsro0u3bgcpy1" path="res://Scripts/close_changelog.gd" id="1_65pj6"]
 
@@ -84,36 +84,36 @@ _data = {
 &"changelog_move": SubResource("Animation_65pj6")
 }
 
-[node name="ChangelogPanel" type="CanvasLayer"]
+[node name="ChangelogPanel" type="CanvasLayer" unique_id=226226015]
 script = ExtResource("1_65pj6")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1945715817]
 offset_right = 1933.0
 offset_bottom = 1099.0
 color = Color(0, 0, 0, 0.41960785)
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1926288219]
 offset_left = 576.0
 offset_top = 56.0
 offset_right = 1384.0
 offset_bottom = 1038.0017
 theme_override_styles/panel = SubResource("StyleBoxFlat_3aigv")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1060712329]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=899924320]
 layout_mode = 2
 theme_override_font_sizes/font_size = 54
 text = "Changelog"
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer" unique_id=1425228480]
 custom_minimum_size = Vector2(500, 850)
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer" unique_id=397988437]
 custom_minimum_size = Vector2(800, 850)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 36
@@ -122,7 +122,15 @@ theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 theme_override_font_sizes/mono_font_size = 36
 bbcode_enabled = true
-text = "v0.10a
+text = "v0.11a
+- Removed a plugin
+- Bugfixes
+- Started Tutorial
+- Added Camera System
+- Added Assets
+- Added TileSets and TileMaps
+
+v0.10a
 - Bugfix on changelog
 
 v0.9a
@@ -152,7 +160,7 @@ v0.2a
 v0.1a
 - Main Menu and VHS Effect"
 
-[node name="close_changelog" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="close_changelog" type="Button" parent="PanelContainer/VBoxContainer" unique_id=294257230]
 layout_mode = 2
 theme_override_font_sizes/font_size = 54
 theme_override_styles/normal = SubResource("StyleBoxFlat_65pj6")
@@ -160,11 +168,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_e8qw5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mw8qg")
 text = "Close"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_mw8qg")
-}
-autoplay = "changelog_move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1540813267]
+libraries/ = SubResource("AnimationLibrary_mw8qg")
+autoplay = &"changelog_move"
 speed_scale = 0.25
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/close_changelog" to="." method="_on_close_changelog_pressed"]

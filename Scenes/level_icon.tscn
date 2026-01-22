@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c514a80aitvkn"]
+[gd_scene format=3 uid="uid://c514a80aitvkn"]
 
 [ext_resource type="Script" uid="uid://b3q0xckxqd3d6" path="res://Scripts/level_icon.gd" id="1_1e7bi"]
 
@@ -8,7 +8,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_w4tj1"]
 gradient = SubResource("Gradient_2bjhv")
 
-[node name="LevelIcon" type="Control"]
+[node name="LevelIcon" type="Control" unique_id=1140681624]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 64.0
@@ -16,7 +16,7 @@ offset_bottom = 64.0
 pivot_offset = Vector2(32, 32)
 script = ExtResource("1_1e7bi")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1567456378]
 layout_mode = 0
 offset_left = -40.0
 offset_top = -48.0
@@ -24,9 +24,9 @@ offset_right = 95.0
 offset_bottom = 6.0
 theme_override_colors/font_color = Color(0.68477, 0.50688004, 0, 1)
 theme_override_font_sizes/font_size = 54
-text = "World 0"
+text = "Level 0"
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=599980880]
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0

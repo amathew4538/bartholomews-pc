@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwwckjnessu02"]
+[gd_scene format=3 uid="uid://cwwckjnessu02"]
 
 [ext_resource type="FontFile" uid="uid://crpij1m4sqxgr" path="res://Assets/m6x11plus.ttf" id="1_hs70x"]
 [ext_resource type="Script" uid="uid://buirhowy1a7mb" path="res://Scripts/quit_button.gd" id="2_8k21b"]
 [ext_resource type="Script" uid="uid://cwudobesasax0" path="res://Scripts/start_button.gd" id="2_avrgi"]
 [ext_resource type="Script" uid="uid://dikmq5htpn7k3" path="res://Scripts/changelog_button.gd" id="3_wfxj5"]
 [ext_resource type="PackedScene" uid="uid://0jcv86qxdaav" path="res://Scenes/changelog_panel.tscn" id="4_q7rna"]
+[ext_resource type="Texture2D" uid="uid://c8lga8fhphtb8" path="res://Assets/kenney_input-prompts_1.4.1/Keyboard & Mouse/Default/keyboard_f1.png" id="6_mdgfu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs70x"]
 bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
@@ -104,6 +105,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(704, 816)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 48)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(96, 64)]
+}
 
 [sub_resource type="Animation" id="Animation_avrgi"]
 resource_name = "title_bob"
@@ -169,6 +194,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(704, 816), Vector2(704, 832), Vector2(704, 816), Vector2(704, 800), Vector2(704, 816), Vector2(704, 832), Vector2(704, 816), Vector2(704, 800), Vector2(704, 816)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(32, 48), Vector2(32, 64), Vector2(32, 48), Vector2(32, 32), Vector2(32, 48)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(96, 64), Vector2(96, 80), Vector2(96, 63.999996), Vector2(96, 48), Vector2(96, 64)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wfxj5"]
 _data = {
@@ -176,7 +225,7 @@ _data = {
 &"title_bob": SubResource("Animation_avrgi")
 }
 
-[node name="Start_UI" type="Control"]
+[node name="Start_UI" type="Control" unique_id=46441725]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -184,12 +233,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="start_button" type="Button" parent="."]
+[node name="start_button" type="Button" parent="." unique_id=535337666]
 layout_mode = 0
 offset_left = 704.0
 offset_top = 344.0
 offset_right = 1226.0
-offset_bottom = 521.0044
+offset_bottom = 521.004
 theme_override_fonts/font = ExtResource("1_hs70x")
 theme_override_font_sizes/font_size = 54
 theme_override_styles/normal = SubResource("StyleBoxFlat_hs70x")
@@ -198,7 +247,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_avrgi")
 text = "Start"
 script = ExtResource("2_avrgi")
 
-[node name="changelog_button" type="Button" parent="."]
+[node name="changelog_button" type="Button" parent="." unique_id=363457071]
 layout_mode = 0
 offset_left = 705.0
 offset_top = 568.0
@@ -213,7 +262,7 @@ text = "Changelog"
 script = ExtResource("3_wfxj5")
 changelog_scene = ExtResource("4_q7rna")
 
-[node name="quit_button" type="Button" parent="."]
+[node name="quit_button" type="Button" parent="." unique_id=1088386997]
 layout_mode = 0
 offset_left = 704.0
 offset_top = 816.0
@@ -227,31 +276,46 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_avrgi")
 text = "Quit"
 script = ExtResource("2_8k21b")
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=1130653395]
 layout_mode = 1
 offset_left = 424.0
 offset_top = 78.0
 offset_right = 1484.0
-offset_bottom = 258.00015
+offset_bottom = 258.00073
 theme_override_font_sizes/font_size = 180
 text = "Bartholomew's PC"
 
-[node name="Version" type="Label" parent="."]
+[node name="Version" type="Label" parent="." unique_id=92621276]
 layout_mode = 0
 offset_left = 936.0
 offset_top = 264.0
 offset_right = 1012.0
-offset_bottom = 300.00015
+offset_bottom = 300.00012
 theme_override_font_sizes/font_size = 36
-text = "v0.10a"
+text = "v0.11a"
 horizontal_alignment = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_wfxj5")
-}
-autoplay = "title_bob"
+[node name="Label" type="Label" parent="." unique_id=1828983452]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 64.0
+offset_right = 304.0
+offset_bottom = 100.000046
+theme_override_font_sizes/font_size = 36
+text = "for CRT Settings"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1209698425]
+libraries/ = SubResource("AnimationLibrary_wfxj5")
+autoplay = &"title_bob"
 speed_scale = 0.25
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=870322864]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 96.0
+offset_bottom = 112.0
+texture = ExtResource("6_mdgfu")
 
 [connection signal="pressed" from="start_button" to="start_button" method="_on_pressed"]
 [connection signal="pressed" from="changelog_button" to="changelog_button" method="_on_pressed"]
