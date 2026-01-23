@@ -19,6 +19,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Bartholomew's PC"
+config/version="v0.11a"
 run/main_scene="uid://db3ekeddiudml"
 config/auto_accept_quit=false
 config/features=PackedStringArray("4.6", "Forward Plus")
@@ -36,9 +37,62 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
-layout/style_directory={}
+directories/dch_directory={
+"Aiddle": "res://Dialogue/Aiddle.dch",
+"Charlie": "res://Dialogue/Charlie.dch"
+}
+directories/dtl_directory={
+"Tutlvl1": "res://Dialogue/Tutlvl1.dtl"
+}
+layout/style_directory={
+"": "res://Dialogue/PixelStyle.tres",
+"PixelStyle": "res://Dialogue/PixelStyle.tres"
+}
+layout/style_list=["res://Dialogue/PixelStyle.tres"]
+layout/default_style="res://Dialogue/PixelStyle.tres"
+variables={
+"A": "",
+"D": "",
+"S": "",
+"W": ""
+}
+glossary/default_case_sensitive=true
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.05
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={
+"\"?!.,;:-\"": 0.1
+}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+text/autocolor_names=true
 
 [display]
 
@@ -49,7 +103,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/flowerwall_postprocess/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/flowerwall_postprocess/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg")
 
 [global_group]
 
@@ -57,7 +111,7 @@ camera_area="The area the cameras stay within"
 
 [gui]
 
-theme/custom_font="uid://crpij1m4sqxgr"
+theme/custom="uid://0i62y468ma0k"
 
 [input]
 

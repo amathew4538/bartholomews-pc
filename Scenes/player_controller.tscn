@@ -210,18 +210,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ur5x"]
-size = Vector2(26.5, 23.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl1v4"]
-size = Vector2(27, 5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bnokr"]
-size = Vector2(20, 17)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1esxm"]
-radius = 3.0
-height = 20.0
+size = Vector2(25, 46)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1esxm"]
 lifetime_randomness = 0.26
@@ -245,21 +235,9 @@ sprite_frames = SubResource("SpriteFrames_iy555")
 animation = &"start_hover"
 autoplay = "idle"
 
-[node name="Hand" type="CollisionShape2D" parent="." unique_id=275745180]
-position = Vector2(2, 0.25)
-shape = SubResource("RectangleShape2D_5ur5x")
-
-[node name="Feet" type="CollisionShape2D" parent="." unique_id=1736872512]
-position = Vector2(1.5, 29.5)
-shape = SubResource("RectangleShape2D_dl1v4")
-
 [node name="Legs" type="CollisionShape2D" parent="." unique_id=2116484873]
-position = Vector2(1, 19.5)
+position = Vector2(2.5, 9)
 shape = SubResource("RectangleShape2D_bnokr")
-
-[node name="Finger" type="CollisionShape2D" parent="." unique_id=754102944]
-position = Vector2(7, -14)
-shape = SubResource("CapsuleShape2D_1esxm")
 
 [node name="JumpParticles" type="GPUParticles2D" parent="." unique_id=17307486]
 position = Vector2(3, 32)

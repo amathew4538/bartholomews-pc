@@ -292,7 +292,7 @@ offset_top = 264.0
 offset_right = 1012.0
 offset_bottom = 300.00012
 theme_override_font_sizes/font_size = 36
-text = "v0.11a"
+text = "v0.12a"
 horizontal_alignment = 2
 
 [node name="Label" type="Label" parent="." unique_id=1828983452]

@@ -1,0 +1,53 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {
+"Exclamation": {
+"mode": 0,
+"name": "Exclamation",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://Assets/WinXp/Sounds/Windows XP Exclamation.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+},
+"Question": {
+"mode": 0,
+"name": "Question",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://Assets/WinXp/Sounds/Windows XP Information Bar.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
+"style": "PixelStyle",
+"suffix": ""
+},
+&"default_portrait": "Main",
+&"description": "Aiden the Google Search Bar",
+&"display_name": "Aiddle",
+&"mirror": false,
+&"nicknames": ["Search Bar"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Main": {
+"export_overrides": {
+"image": "\"res://Assets/AidenSearchBar.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "",
+"sound_mood": "Statement"
+}
+},
+&"scale": 0.75
+}

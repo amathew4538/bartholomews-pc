@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c2joie6ju07x0"]
+
+[ext_resource type="Texture2D" uid="uid://cvel3lm1x0c8g" path="res://Assets/AidenSearchBar_fly.png" id="1_roup6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm6gb"]
+atlas = ExtResource("1_roup6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxj64"]
+atlas = ExtResource("1_roup6")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl7cn"]
+atlas = ExtResource("1_roup6")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sftq3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm6gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxj64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl7cn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxj64")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qguuy"]
+size = Vector2(64, 44)
+
+[node name="Aiddle" type="CharacterBody2D" unique_id=18612775]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=71101261]
+sprite_frames = SubResource("SpriteFrames_sftq3")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2029828011]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_qguuy")

@@ -122,7 +122,10 @@ theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 theme_override_font_sizes/mono_font_size = 36
 bbcode_enabled = true
-text = "v0.11a
+text = "v0.12a
+- Added dialog to Tutorial Level
+
+v0.11a
 - Removed a plugin
 - Bugfixes
 - Started Tutorial
