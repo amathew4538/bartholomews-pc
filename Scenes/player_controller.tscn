@@ -235,7 +235,7 @@ sprite_frames = SubResource("SpriteFrames_iy555")
 animation = &"start_hover"
 autoplay = "idle"
 
-[node name="Legs" type="CollisionShape2D" parent="." unique_id=2116484873]
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=2116484873]
 position = Vector2(2.5, 9)
 shape = SubResource("RectangleShape2D_bnokr")
 
