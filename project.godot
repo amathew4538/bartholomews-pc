@@ -108,7 +108,6 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/flow
 [global_group]
 
 camera_area="The area the cameras stay within"
-Player="players"
 
 [gui]
 
